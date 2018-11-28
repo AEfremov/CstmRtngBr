@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SimpleRatingBar">
+        <attr name="numStars" format="float" />
+        <attr name="rating" format="float" />
+        <attr name="drawableEmpty" format="reference" />
+        <attr name="drawableFilled" format="reference" />
+        <attr name="minimumStars" format="float" />
+        <attr name="starWidth" format="dimension" />
+        <attr name="starHeight" format="dimension" />
+    </declare-styleable>
+</resources>
