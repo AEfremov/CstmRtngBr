@@ -46,24 +46,24 @@ class SimpleRatingBar  : LinearLayout, BaseRatingBar {
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
 //        setAttributes(attrs)
 //        initView()
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.AwesomeRatingBar)
-        val rating = typedArray.getFloat(R.styleable.AwesomeRatingBar_rating, 0f)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.SimpleRatingBar)
+        val rating = typedArray.getFloat(R.styleable.SimpleRatingBar_rating, 0f)
 
-        emptyDrawable = if (typedArray.hasValue(R.styleable.AwesomeRatingBar_drawableEmpty)) {
-            ContextCompat.getDrawable(context, typedArray.getResourceId(R.styleable.AwesomeRatingBar_drawableEmpty, View.NO_ID))
+        emptyDrawable = if (typedArray.hasValue(R.styleable.SimpleRatingBar_drawableEmpty)) {
+            ContextCompat.getDrawable(context, typedArray.getResourceId(R.styleable.SimpleRatingBar_drawableEmpty, View.NO_ID))
         } else {
             null
         }
-        filledDrawable = if (typedArray.hasValue(R.styleable.AwesomeRatingBar_drawableFilled)) {
-            ContextCompat.getDrawable(context, typedArray.getResourceId(R.styleable.AwesomeRatingBar_drawableFilled, View.NO_ID))
+        filledDrawable = if (typedArray.hasValue(R.styleable.SimpleRatingBar_drawableFilled)) {
+            ContextCompat.getDrawable(context, typedArray.getResourceId(R.styleable.SimpleRatingBar_drawableFilled, View.NO_ID))
         } else {
             null
         }
-        numStars = typedArray.getFloat(R.styleable.AwesomeRatingBar_numStars, numStars)
-        currentRating = typedArray.getFloat(R.styleable.AwesomeRatingBar_rating, currentRating)
-        minimumStars = typedArray.getFloat(R.styleable.AwesomeRatingBar_minimumStars, minimumStars)
-        starWidth = typedArray.getDimensionPixelSize(R.styleable.AwesomeRatingBar_starWidth, 0)
-        startHeight = typedArray.getDimensionPixelSize(R.styleable.AwesomeRatingBar_starHeight, 0)
+        numStars = typedArray.getFloat(R.styleable.SimpleRatingBar_numStars, numStars)
+        currentRating = typedArray.getFloat(R.styleable.SimpleRatingBar_rating, currentRating)
+        minimumStars = typedArray.getFloat(R.styleable.SimpleRatingBar_minimumStars, minimumStars)
+        starWidth = typedArray.getDimensionPixelSize(R.styleable.SimpleRatingBar_starWidth, 0)
+        startHeight = typedArray.getDimensionPixelSize(R.styleable.SimpleRatingBar_starHeight, 0)
 
         typedArray.recycle()
 
